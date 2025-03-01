@@ -70,9 +70,9 @@ const withAndroidManifestService: ConfigPlugin = (config) => {
           "android:permission":
             "android.permission.BIND_TELECOM_CONNECTION_SERVICE",
           // Use this to target android >= 11
-          // "android:foregroundServiceType": "camera|microphone",
+          "android:foregroundServiceType": "camera|microphone",
           // For android < 11
-          "android:foregroundServiceType": "phoneCall",
+          // "android:foregroundServiceType": "phoneCall",
         },
         "intent-filter": [
           {
@@ -120,6 +120,9 @@ const withCallkeep: ConfigPlugin = (config) => {
     "android.permission.FOREGROUND_SERVICE",
     "android.permission.READ_PHONE_STATE",
     "android.permission.CALL_PHONE",
+    "android.permission.RECORD_AUDIO",
+    "android.permission.FOREGROUND_SERVICE_MICROPHONE",
+    "android.permission.FOREGROUND_SERVICE_CAMERA"
   ]);
 
   config = withAndroidManifestService(config);
