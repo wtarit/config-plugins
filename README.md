@@ -1,16 +1,16 @@
 # Expo Config Plugins
 
-- A collection of [Expo config plugins](https://docs.expo.dev/guides/config-plugins/) for configuring the `npx expo prebuild` command.
-- This repo is to Expo config plugins as [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped) is to TypeScript.
-- We prefer packages ship their own Expo config plugin (to ensure versioning is aligned), but if they haven't adopted the system yet, the community can add a package here.
-- All packages here are community maintained. Feel free to improve docs, packages, tests, etc.
-- We maintain a 1-1 mapping of **native packages** ⇔ `@config-plugins/*`. This means there should be no general utility packages here -- those are better suited for a different repo / NPM namespace.
+This repository is a collection of assorted [Expo config plugins](https://docs.expo.dev/guides/config-plugins/) for configuring the `npx expo prebuild` command. It is meant to be a temporary home for packages that don't have a built-in Config Plugin.
+
+- **We prefer packages to ship their own Expo config plugin**. This helps ensure that plugin and package versions are always aligned, and that new features are made available in both the package and plugin simultaneously. If packages haven't adopted config plugins yet, the community can add a package here as a temporary home.
+
+- **All packages here are community maintained.** They are not maintained by Expo. Feel free to improve docs, packages, tests, etc.
+
+- **We maintain a one-to-one mapping between native packages and `@config-plugins/*`**. This means there should be no general utility packages here — those are better suited for a different repository or npm namespace.
 
 ## First-party plugins
 
-Here is a list of known packages that have a built-in Config Plugin.
-
-> Not all packages need a config plugin, packages that don't appear here might still work with managed EAS.
+These days, **most React Native libraries have a built-in Config Plugin** if needed. The following are some examples of libraries that have a built-in Config Plugin — this is far from an exhaustive list, but if you're looking to learn from existing packages, this is a good place to start.
 
 - [React Native Firebase](https://rnfirebase.io/) (`@react-native-firebase/perf`, `@react-native-firebase/app`, `@react-native-firebase/crashlytics`)
 - [react-native-google-cast](https://github.com/react-native-google-cast/react-native-google-cast)
@@ -18,7 +18,7 @@ Here is a list of known packages that have a built-in Config Plugin.
 - [react-native-health](https://github.com/agencyenterprise/react-native-health)
 - [@react-native-mapbox-gl/maps](https://github.com/rnmapbox/maps)
 - [@logrocket/react-native](https://www.npmjs.com/package/@logrocket/react-native)
-- [sentry-expo](https://www.npmjs.com/package/sentry-expo)
+- [@sentry/react-native](https://github.com/getsentry/sentry-react-native)
 - [@leanplum/react-native-sdk](https://github.com/Leanplum/Leanplum-ReactNative-SDK#readme)
 - [react-native-fbsdk-next](https://www.npmjs.com/package/react-native-fbsdk-next)
 - [@stripe/stripe-react-native](https://www.npmjs.com/package/@stripe/stripe-react-native)
@@ -33,10 +33,11 @@ Here is a list of known packages that have a built-in Config Plugin.
 - [App Clips](https://github.com/bndkt/react-native-app-clip/)
 - [iOS Safari Extensions](https://github.com/andrew-levy/react-native-safari-extension/)
 - [react-native-ble-plx](https://github.com/dotintent/react-native-ble-plx)
+- ... and [many more](https://reactnative.directory/)
 
 ### Complementary
 
-More out-of-tree plugins which can be used to configure more packages.
+In some cases, libraries will ship plugins as separate packages. For example:
 
 - [onesignal-expo-plugin](https://github.com/OneSignal/onesignal-expo-plugin) (for use with `react-native-onesignal`)
   - Configures **iOS Notification Service Extensions** for rich push notification and custom notification actions.
@@ -50,6 +51,7 @@ More out-of-tree plugins which can be used to configure more packages.
 - [expo-react-native-freshchat](https://www.npmjs.com/package/expo-react-native-freshchat) (for use with `react-native-freshchat-sdk`)
 - [react-native-keyevent-expo-config-plugin](https://github.com/chronsyn/react-native-keyevent-expo-config-plugin) (for use with `react-native-keyevent`)
 - [watermelondb-expo-plugin](https://github.com/morrowdigital/watermelondb-expo-plugin) (for use with `@nozbe/watermelondb`)
+- ... and [many more](https://reactnative.directory/)
 
 ### No Plugin Required
 
@@ -61,8 +63,7 @@ Just install and rebuild! If a package doesn't require any futher setup then it 
 - [react-native-app-shortcuts](https://github.com/lokyoung/react-native-app-shortcuts)
 - [react-native-multiple-image-picker](https://github.com/baronha/react-native-multiple-image-picker)
 - [`@shopify/flash-list`](https://github.com/Shopify/flash-list)
-
-> Feel free to [open a PR](https://github.com/expo/config-plugins/edit/main/README.md) with missing packages.
+- ... and [many more](https://reactnative.directory/)
 
 ## Contributing!
 

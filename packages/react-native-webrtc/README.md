@@ -8,6 +8,7 @@ Ensure you use versions that work together!
 
 | `expo` | `react-native-webrtc` | `@config-plugins/react-native-webrtc` |
 | ------ | --------------------- | ------------------------------------- |
+| 53.0.0 | 124.0.5               | 11.0.0                                |
 | 52.0.0 | 124.0.4               | 10.0.0                                |
 | 51.0.0 | 118.0.7               | 9.0.0                                 |
 | 50.0.0 | 118.0.1               | 8.0.0                                 |
@@ -42,7 +43,7 @@ Next, rebuild your app as described in the ["Adding custom native code"](https:/
 
 ### Event Target Shim
 
-> SDK 50 and greater.
+> Only for SDK 50.
 
 React Native uses `event-target-shim@5` which is not compatible with `react-native-webrtc`'s dependency on `event-target-shim@6`. To fix this, you may need to add a redirection in your `metro.config.js` file:
 
